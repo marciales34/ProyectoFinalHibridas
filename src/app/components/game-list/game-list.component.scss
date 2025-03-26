@@ -1,0 +1,45 @@
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  column-gap: 10px;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+  width: 100%; /* 🔹 Antes era max-width: 70%; ahora es 100% */
+  max-width: 1200px; /* 🔹 Límite para evitar que sea demasiado ancho en pantallas grandes */
+  margin: 0 auto;
+  overflow-x: hidden; /* 🔹 Evita desbordamiento horizontal */
+  margin-bottom: 150px;
+}
+
+
+  /* 🔽 Cuando la pantalla sea menor a 1024px (tablets) */
+  @media (max-width: 1024px) {
+    .game-list {
+      grid-template-columns: repeat(4, 1fr); // 🔹 4 columnas
+    }
+  }
+  
+  /* 🔽 Cuando la pantalla sea menor a 768px (tablets pequeñas y móviles grandes) */
+  @media (max-width: 768px) {
+    .game-list {
+      grid-template-columns: repeat(3, 1fr); // 🔹 3 columnas
+    }
+  }
+  
+  /* 🔽 Cuando la pantalla sea menor a 480px (celulares) */
+  @media (max-width: 480px) {
+    .game-list {
+      grid-template-columns: repeat(2, 1fr); // 🔹 2 columnas
+    }
+  }
+  
+  
+  
+  app-game-card {
+    display: flex;
+    justify-content: center;
+  }
+  

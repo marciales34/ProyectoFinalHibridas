@@ -1,0 +1,116 @@
+* {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #b4b4b4;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; // Permite que los elementos se ajusten en pantallas pequeñas
+}
+
+.logo img {
+  height: 130px;
+}
+
+.logo {
+  margin-left: 50px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 100px;
+}
+
+.nav-buttons button {
+  font-size: 18px;
+  padding: 12px 20px;
+  background-color: #e44d26;
+  height: 60px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-buttons button:hover {
+  background-color: #333;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.login-button {
+  font-size: 18px;
+  padding: 12px 20px;
+  background-color: #e44d26;
+  height: 70px;
+  margin-right: 60px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.login-button:hover {
+  background-color: #333;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* 📌 RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo img {
+    height: 100px; // Reduce el tamaño del logo en tablets
+  }
+
+  .nav-buttons {
+    gap: 50px;
+  }
+
+  .nav-buttons button {
+    font-size: 16px;
+    padding: 10px 15px;
+    height: 50px;
+  }
+
+  .login-button {
+    height: 60px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 80px; // Más pequeño en móviles
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+  }
+
+  .nav-buttons button {
+    width: 100%;
+    max-width: 200px;
+    font-size: 16px;
+    padding: 10px;
+    height: 45px;
+  }
+
+  .login-button {
+    width: 100%;
+    max-width: 200px;
+    height: 50px;
+  }
+}

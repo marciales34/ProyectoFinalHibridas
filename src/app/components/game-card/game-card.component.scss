@@ -1,0 +1,45 @@
+.game-card {
+    background: #b4b4b4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    padding: 15px;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .game-card img {
+    width: 100%;
+    height: auto; /* 🔹 Permite que la altura se ajuste automáticamente */
+    max-height: 180px; /* 🔹 Evita imágenes demasiado altas */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+  
+  .game-info {
+    padding: 10px;
+  }
+  
+  .name-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    font-family: "Titillium Web", sans-serif;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #e44d26;
+  }
+  
+  .year {
+    font-size: 0.9rem;
+    color: gray;
+  }
+  
