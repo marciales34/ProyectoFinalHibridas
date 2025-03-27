@@ -37,3 +37,6 @@
 @import '@ionic/angular/css/palettes/dark.system.css';
 
 
+.swal2-container {
+    z-index: 99999 !important; /* Asegura que esté siempre al frente */
+  }

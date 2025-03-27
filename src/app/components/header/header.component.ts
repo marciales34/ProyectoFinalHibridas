@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, NavController } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
+import { Router, RouterModule } from '@angular/router'; // Importa RouterModule
 
 @Component({
   selector: 'app-header',
+  standalone: true,
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  standalone: true, // Necesario si no tienes app.module.ts
-  imports: [IonicModule, CommonModule], // Importa módulos para Ionic
+  imports: [IonicModule, CommonModule, RouterModule], // Agrega RouterModule
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  constructor(private navCtrl: NavController) {} // ✅ Inyecta NavController
+
+  redirigirALogin() {
+    this.navCtrl.navigateForward('/login'); // ✅ Usa navigateForward en vez de navigateByUrl
+  }
+}
 
