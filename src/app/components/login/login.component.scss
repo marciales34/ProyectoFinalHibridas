@@ -269,3 +269,61 @@ select{
 .footer{
     margin-top: 150px;
 }
+
+/* ------------------ MEDIA QUERIES PARA RESPONSIVE ------------------ */
+
+/* Pantallas menores a 1024px (Tablets y pantallas medianas) */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+}
+
+/* Pantallas menores a 768px (Móviles en orientación vertical) */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+        padding: 20px;
+    }
+    .sign-in-container, .sign-up-container {
+        width: 100%;
+        padding: 15px;
+    }
+    .overlay-container {
+        display: none; /* Oculta el overlay en pantallas pequeñas */
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Pantallas menores a 480px (Móviles pequeños) */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    form {
+        padding: 0 20px;
+    }
+    input, select {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .footer {
+        margin-top: 20px;
+    }
+}
+

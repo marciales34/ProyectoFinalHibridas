@@ -140,10 +140,8 @@ export class LoginComponent  implements OnInit {
       const tipoUsuario = this.formularioLogin.value.tipoUsuario;
 
       if (tipoUsuario === 'cliente') {
-        this.onSubmitLoginCliente(); // Llamada al método específico para clientes
-      } else {
-        //this.onSubmitLoginAbogado(); // Llamada al método específico para abogados
-      }
+        this.onSubmitLoginCliente();
+      } 
     } else {
       console.log('Formulario de inicio de sesión inválido');
     }
@@ -184,40 +182,4 @@ export class LoginComponent  implements OnInit {
 }
 
 
-
-
-  /*onSubmitLoginAbogado(): void {
-    const loginData = {
-      correo: this.formularioLogin.value.correo,
-      password: this.formularioLogin.value.password,
-    };
-
-    this.http.post<any>('http://localhost:8080/login', loginData).subscribe(
-      (response) => {
-        const nombreUsuario = response.nombre;
-        const abogadoId = response.id;
-        const accessToken = response.token;
-
-        localStorage.setItem('username', nombreUsuario);
-        localStorage.setItem('abogadoId', abogadoId.toString());
-        localStorage.setItem('accessToken', accessToken);
-
-        if (response.rol === 'admin') {
-          this.router.navigate(['/admin-principal']);
-        } else {
-          this.router.navigate(['/InicioPaginaPrincipal']);
-        }
-
-        this.alertaService.success('Login exitoso', true);
-      },
-      (error) => {
-        if (error.status === 401) {
-          this.alertaService.error('Credenciales incorrectas. Por favor, intenta de nuevo.');
-        } else {
-          console.error('Error en el inicio de sesión para abogado:', error);
-          this.alertaService.error('Error al iniciar sesión, intenta de nuevo más tarde.');
-        }
-      }
-    );
-  }*/
 }
