@@ -6,6 +6,11 @@
       <span class="price">${{ game.price }}</span>
     </div>
     <p class="year">{{ game.year }}</p>
+
+    <button class="btn-carrito" (click)="onAgregarAlCarrito()" aria-label="Añadir al carrito">
+      <i class="fa-solid fa-cart-plus"></i>
+    </button>
+    
   </div>
 </div>
 

@@ -1,6 +1,10 @@
 <ion-content>
   <div class="game-list">
-    <app-game-card *ngFor="let game of games" [game]="game"></app-game-card>
+    <app-game-card
+     *ngFor="let game of games"
+      [game]="game"
+      (agregarAlCarrito)="agregarAlCarrito($event)">
+    </app-game-card>
   </div>
-</ion-content>
 
+</ion-content>

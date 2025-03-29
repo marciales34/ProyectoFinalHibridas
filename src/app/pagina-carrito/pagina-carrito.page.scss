@@ -1,0 +1,21 @@
+.juego-imagen {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    margin-right: 10px;
+  }
+  .carrito-vacio {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #888; // Color gris elegante
+    padding: 20px;
+    margin-top: 20px;
+
+    ion-icon {
+      font-size: 3rem;
+      color: #ff5733; // Un color llamativo para el icono
+      display: block;
+      margin: 10px auto;
+    }
+  }

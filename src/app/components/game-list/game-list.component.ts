@@ -3,6 +3,12 @@ import { GameCardComponent } from "../game-card/game-card.component";
 import { CommonModule } from '@angular/common';
 import { IonContent } from "@ionic/angular/standalone";
 
+// Importar la interfaz del juego
+import { Game } from 'src/app/interfaces/game.interface';
+
+// Importar el servicio de alerta
+import { AlertController } from '@ionic/angular';
+
 @Component({
   selector: 'app-game-list',
   templateUrl: './game-list.component.html',
@@ -27,5 +33,18 @@ export class GameListComponent {
     
     
   ];
+
+  carrito: Game[] = []; // Lista de productos en el carrito
+
+  constructor(private alertController: AlertController) {} // Inyectar AlertController en el constructor
+
+  // Método para mostrar la alerta de confirmación
+
+
+  async agregarAlCarrito(game: Game) {
+    this.carrito.push(game); // Agregar el juego al carrito
+  }
+
 }
+
 
